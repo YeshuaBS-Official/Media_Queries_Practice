@@ -24,7 +24,6 @@
 
   .header, .navbar {
     background-color: rgb(145, 47, 47);
-    color:rgb(0, 0, 0);
     margin: 0px;
     padding: 30px;
     padding-top: 5px;
@@ -38,6 +37,27 @@
     padding-bottom: 15px;
   }
 
+  a.navBtn {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+  a.active {
+    color:rgb(0, 0, 0);
+    text-decoration: underline;
+  }
+
+  @keyframes navHover {
+    from{color: black;}
+    to{color: aliceblue;}
+  }
+
+  a.navBtn:hover {
+    animation-name: navHover;
+    animation-duration: 0.5s;
+    color: aliceblue;
+  }
+
   ul {
     list-style: none;
     display: inline;
@@ -48,6 +68,14 @@
   li {
     display: inline;
     padding: 10px;
+  }
+
+  p {
+    padding-left: 5px;
+  }
+
+  .underl{
+    text-decoration: underline;
   }
 
   h1 {
@@ -71,10 +99,16 @@
     
   }
   
-
+  .list-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   
   @media (max-width: 480px) {
     .main-content {
+      display: block;
+    }
+    .list-content {
       display: block;
     }
     .column {
