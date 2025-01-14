@@ -22,6 +22,14 @@
     background-color: rgb(160, 160, 160);
   }
 
+  img {
+    max-width: 300px;
+  }
+
+  img.gallery {
+    max-width: 200px;
+  }
+
   .header, .navbar {
     background-color: rgb(145, 47, 47);
     margin: 0px;
@@ -71,7 +79,8 @@
   }
 
   p {
-    padding-left: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .underl{
@@ -96,12 +105,41 @@
   .footer {
     background-color: rgb(56, 56, 56);
     height: 30vh;
+    color: aliceblue;
     
   }
   
   .list-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .offColor {
+    background-color:rgb(145, 47, 47);
+    color: aliceblue;
+  }
+
+  div.gallery {
+    background-color: blanchedalmond;
+      color: black;
+  }
+
+  div.gallery:hover {
+    animation-name: galleryHover;
+    animation-duration: 1s;
+    color: aliceblue;
+    background-color: rgb(70, 70, 70);
+  }
+
+  @keyframes galleryHover {
+    from{
+      background-color: blanchedalmond;
+      color: black;
+    }
+    to{
+      background-color: rgb(70, 70, 70);
+      color: aliceblue;
+    }
   }
   
   @media (max-width: 480px) {
